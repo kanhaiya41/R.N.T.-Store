@@ -1,0 +1,1198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* navbar  */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 7vw;
+    padding: 0 2vw;
+    box-shadow: 0 0 0 .01vw;
+}
+
+nav img {
+    height: 7vw;
+    width: 7vw;
+    border-radius: 50%;
+}
+
+.nav {
+    display: flex;
+    gap: 5vw;
+    font-size: 1.1vw;
+    align-items: center;
+}
+
+nav h4 {
+    cursor: pointer;
+}
+
+.menuicon {
+    display: none;
+}
+
+.nav button {
+    padding: .7vw 1vw;
+    border-radius: 5px;
+    font-size: larger;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    background-color: coral;
+    color: white;
+    transform: underline 2s;
+}
+
+.pdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+}
+
+.ppic {
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+}
+
+.sidenav {
+    display: none;
+}
+
+.Loader {
+    margin-right: 12px;
+    height: 30px;
+    width: 30px;
+    animation: spin linear 2s infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* navbar end  */
+
+/* edit profile */
+
+.editProfile {
+    background: coral;
+    width: 50vw;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    margin: auto;
+    gap: 2vh;
+}
+
+.editProfile button {
+    padding: 10px 20px;
+    background-color: rgb(245, 237, 237);
+    width: 8vw;
+    color: coral;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.changeProfile {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.editlb {
+    display: flex;
+    gap: 1vw;
+}
+
+.pswrd {
+    display: flex;
+    justify-content: space-between;
+    width: 43vw;
+}
+.frgtpswrd {
+    color: rgb(52, 66, 222);
+    cursor: pointer;
+}
+
+.auth{
+    background: coral;
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    padding: 2vw;
+    margin: 5vw 35vw;
+    height: 40vh;
+    justify-content: center;
+
+}
+.auth input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.auth button {
+    padding: 10px 20px;
+    background-color: rgb(245, 237, 237);
+    width: 10vw;
+    color: coral;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* end edit profile */
+
+/* HOme */
+
+.home {
+    position: relative;
+}
+
+.background {
+    background-image: url('../public/img/rnt1.jpg');
+    height: calc(100vh - 7vw);
+    width: 100vw;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    position: absolute;
+}
+
+.content {
+    position: absolute;
+    padding: 18vh 0 0 10vw;
+    width: 50vw;
+}
+
+.content h1 {
+    color: coral;
+}
+
+.content h4 {
+    color: green;
+}
+
+.content h6 {
+    color: royalblue;
+    font-weight: bold;
+}
+
+.strbtn {
+    padding: 1vw 2vw;
+    margin-top: 15vh;
+    border-radius: 5px;
+    font-size: larger;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    background-color: coral;
+    color: white;
+    transform: underline 2s;
+}
+
+.strbtn:hover {
+    text-decoration: underline;
+
+}
+
+/* Home end  */
+
+/* Sign In  */
+.sign-in-box {
+    /* display: none; Initially hidden */
+    width: 300px;
+    padding: 20px;
+    padding-left: 25px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    position: fixed;
+    top: 51%;
+    left: 51%;
+    transform: translate(146%, -50%);
+    z-index: 2;
+    /* text-align: center; */
+    animation: none;
+    /* Start with no animation */
+}
+
+.sign-in-box h2 {
+    margin-bottom: 20px;
+}
+
+.sign-in-box label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.sign-in-box input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.sign-in-box button {
+    padding: 10px 20px;
+    background-color: coral;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-signin {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: red;
+}
+
+.fillbl {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Animation for Falling Effect */
+@keyframes dropDown {
+    0% {
+        transform: translate(146%, -200%);
+        opacity: 0;
+    }
+
+    60% {
+        transform: translate(146%, 30%);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translate(146%, 20%);
+    }
+
+    100% {
+        transform: translate(146%, 0);
+    }
+}
+
+.sign-in-box.animate {
+    animation: dropDown 1s ease-out;
+}
+
+/* end sign in  */
+/* About us  */
+
+.image-slider {
+    position: relative;
+    width: 100%;
+    height: 10vw;
+    overflow: hidden;
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slider-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: zoom 20s infinite ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+
+    20%,
+    80% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-text h2 {
+    color: coral;
+    font-size: 4vw;
+    text-align: center;
+}
+
+.slider-image:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slider-image:nth-child(2) {
+    animation-delay: 6.5s;
+}
+
+.slider-image:nth-child(3) {
+    animation-delay: 13s;
+}
+
+.aboutclg {
+    padding: 5vw 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+.aboutclg p {
+    font-size: larger;
+    color: #818181;
+}
+
+.eduquality {
+    background-color: #f2f5f5;
+    padding: 5vw 10vw;
+    display: flex;
+
+}
+
+.eduquality h1 {
+    width: 30%;
+    font-weight: 700;
+}
+
+.eduquality p {
+    font-size: larger;
+    color: #818181;
+    width: 70%;
+    padding: 0 5vw;
+
+}
+
+/* end about us  */
+
+/* Contact Us  */
+
+.CI {
+    margin-top: 2vw;
+    font-size: 2vw;
+    font-weight: 1000;
+    text-align: center;
+}
+
+.CIBox {
+    font-size: 1vw;
+    height: 19vw;
+    width: 19vw;
+    background-color: coral;
+    border-radius: 12px;
+    color: white;
+    margin-left: 2vw;
+    font-weight: bold;
+    padding: 3vw;
+}
+
+.call {
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50%;
+}
+
+.CIFLEXBOX {
+    display: flex;
+    gap: 6vw;
+    padding-left: 4vw;
+    flex-wrap: wrap;
+}
+
+/* end Contact Us  */
+
+/* Main Menu  */
+
+.usersidenav {
+    height: 100%;
+    width: 15vw;
+    position: fixed;
+    z-index: 1;
+    top: 14.9vh;
+    left: 0;
+    background-color: coral;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 2vw 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    padding-left: 2vw;
+}
+
+.usersidenav div {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.usersidenav div:hover {
+    color: #f1f1f1;
+}
+
+.usersidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    display: none;
+}
+
+.avstock {
+    margin-left: 15%;
+}
+
+.tabled {
+    width: 90%;
+    padding-left: 14%;
+    text-align: center;
+    height: 30vh;
+    overflow-y: scroll;
+    font-weight: lighter;
+
+}
+
+.sotable {
+    width: 80%;
+    box-shadow: rgb(216, 206, 206) 0.1vh 0.5vh;
+    height: 30vh;
+
+}
+
+.table-data,
+.table-head {
+    padding: 1.5%;
+    border-bottom: #e6dfdf solid 0.1vh;
+}
+
+.table-th {
+    background-color: coral;
+    color: white;
+}
+
+
+
+.allitems {
+    margin-left: 15vw;
+    margin-top: 5vh;
+}
+
+.RequestItem {
+    margin-left: 30vw;
+    margin-top: 12vh;
+    background-color: rgb(247, 133, 92);
+    color: white;
+    font-size: large;
+    font-weight: 600;
+    width: fit-content;
+    height: fit-content;
+    padding: 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    box-shadow: 3px 3px 3px 3px black;
+}
+
+.reqitm {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reqitma {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ritema {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ritem {
+    width: 80%;
+}
+
+.btndivv {
+    display: flex;
+    gap: 10vw;
+    margin-left: 6vw;
+    margin-top: 2vh;
+}
+
+.RequestItem button {
+    border: none;
+    padding: .5vw 1vw;
+    border-radius: 5px;
+}
+
+.r {
+    margin-left: 15vw;
+    margin-top: 1vh;
+}
+
+.rr {
+    margin-left: 15vw;
+    margin-top: 5vh;
+}
+
+.bgn {
+    background-image: url('../public/img/errbg.jpg');
+    height: calc(100vh - 7vw);
+    width: 100vw;
+    background-repeat: no-repeat;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bgn button {
+    padding: .7vw 1vw;
+    border-radius: 5px;
+    font-size: larger;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    background-color: coral;
+    color: white;
+    transform: underline 2s;
+    width: 22vw;
+    margin-top: 12vw;
+
+}
+
+/* end main menu  */
+
+/* issue  */
+
+.issueItem {
+    margin-left: 30vw;
+    margin-top: 2vh;
+    background-color: rgb(247, 133, 92);
+    color: white;
+    font-size: large;
+    font-weight: 600;
+    width: 50vw;
+    height: fit-content;
+    padding: 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    box-shadow: 3px 3px 3px 3px black;
+}
+
+.issueItem button {
+    border: none;
+    padding: .5vw 1vw;
+    border-radius: 5px;
+    margin-left: 3vw;
+}
+
+.issuetable {
+    width: 100%;
+    /* padding-left: 14%; */
+    text-align: center;
+    height: 30vh;
+    overflow-y: scroll;
+    font-weight: lighter;
+
+}
+
+/* end issue  */
+
+
+
+/* for small screen  */
+@media (max-width:600px) {
+
+    /* navbar */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 10vh;
+        padding: 0 3vh;
+        box-shadow: 0 0 0 .01vh;
+    }
+
+    nav img {
+        height: 9vh;
+        width: 9vh;
+    }
+
+    .nav h4,
+    .nav button {
+        display: none;
+    }
+
+    .menuicon {
+        display: block;
+        font-size: 3vh;
+        cursor: pointer;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        display: block;
+    }
+
+    .sidenav div {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .sidenav div:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    .sidenav button {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        cursor: pointer;
+        background-color: #111;
+        border: none;
+    }
+
+    .pdiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 500;
+        font-size: 1.5vh;
+    }
+
+    .ppic {
+        height: 5vh;
+        width: 5vh;
+        border-radius: 50%;
+    }
+
+    /* end navbar */
+    /* home  */
+    .background {
+        background-image: url('../public/img/mobilernt.jpg');
+        height: 90vh;
+        width: 100vw;
+        background-repeat: no-repeat;
+        filter: blur(3px);
+        position: absolute;
+    }
+
+    .content {
+        position: absolute;
+        width: 100vw;
+    }
+
+    .content h1 {
+        color: white;
+    }
+
+    .content h4 {
+        color: royalblue;
+    }
+
+    .content h6 {
+        color: green;
+        font-weight: bold;
+    }
+
+    .strbtn {
+        padding: 1.5vw 3vw;
+        border-radius: 5px;
+        font-size: large;
+        font-weight: 500;
+        outline: none;
+        border: none;
+        background-color: coral;
+        color: white;
+        transform: underline 2s;
+    }
+
+    .strbtn:hover {
+        text-decoration: underline;
+
+    }
+
+    /* end home  */
+
+    /* edit profile */
+
+    .editProfile {
+        background: coral;
+        width: 100vw;
+        padding: 1vw;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        margin: auto;
+        gap: 2vh;
+    }
+
+    .editProfile button {
+        padding: 10px 20px;
+        background-color: rgb(245, 237, 237);
+        width: 20vw;
+        color: coral;
+        font-weight: 700;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .changeProfile {
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+    }
+
+    .editlb {
+        display: flex;
+        gap: 1vw;
+    }
+    .pswrd {
+        display: flex;
+        justify-content: space-between;
+        width: 85vw;
+    }
+    .frgtpswrd {
+        color: rgb(52, 66, 222);
+        cursor: pointer;
+    }
+    
+    .auth{
+        background: coral;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        padding: 2vw;
+        margin: 20vh 0vw;
+        height: 40vh;
+        justify-content: center;
+    
+    }
+    .auth input {
+        width: 90%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    .auth button {
+        padding: 10px 20px;
+        background-color: rgb(245, 237, 237);
+        width: 19vh;
+        color: coral;
+        font-weight: 700;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* main menu  */
+    .usersidenav {
+        width: 0;
+        left: -2%;
+        top: 10%;
+        padding-top: 7vh;
+        /* padding: 1vh; */
+    }
+
+    .usersidenav div {
+        color: black;
+    }
+
+    .usersidenav .closebtn {
+        display: block;
+    }
+
+    .avstock {
+        margin-left: 8%;
+    }
+
+    .tabled {
+        width: 100%;
+        padding-left: 0%;
+        margin-left: 8%;
+        text-align: center;
+        height: 30vh;
+        overflow-y: scroll;
+
+    }
+
+    .sotable {
+        width: 80%;
+        box-shadow: rgb(216, 206, 206) 0.1vh 0.5vh;
+        height: 30vh;
+    }
+
+    .table-data,
+    .table-head {
+        padding: 1.5%;
+        border-bottom: #e6dfdf solid 0.1vh;
+    }
+
+    .table-th {
+        background-color: coral
+    }
+
+    .table-row {
+        background-color: white;
+        color: black;
+        font-size: 4vw;
+    }
+
+    .allitems {
+        margin-left: 0;
+        margin-top: 5vh;
+    }
+
+    .RequestItem {
+        margin-left: 4vw;
+        margin-top: 12vh;
+        background-color: rgb(247, 133, 92);
+        color: white;
+        font-size: large;
+        font-weight: 600;
+        width: fit-content;
+        height: fit-content;
+        padding: 3vw;
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        box-shadow: 3px 3px 3px 3px black;
+    }
+
+    .reqitm {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ritem {
+        width: 70%;
+    }
+
+    .btndivv {
+        display: flex;
+        gap: 10vw;
+        margin-left: 6vw;
+        margin-top: 2vh;
+    }
+
+    .RequestItem button {
+        border: none;
+        padding: .5vw 1vw;
+        border-radius: 5px;
+    }
+
+    .r {
+        margin-left: 0;
+        margin-top: 5vh;
+    }
+
+    .rr {
+        margin-left: 0;
+        margin-top: 5vh;
+    }
+
+    .bgn {
+        background-image: url('../public/img/errbgs.jpg');
+        height: 90vh;
+        width: 100vw;
+        background-repeat: no-repeat;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bgn button {
+        padding: .7vw 1vw;
+        border-radius: 5px;
+        font-size: larger;
+        font-weight: 500;
+        outline: none;
+        border: none;
+        background-color: coral;
+        color: white;
+        transform: underline 2s;
+        width: 22vw;
+        margin-top: 0vw;
+
+    }
+
+    /* end main menu  */
+
+    /* Sign In  */
+    .sign-in-box {
+        /* display: none; Initially hidden */
+        width: 60vw;
+        padding: 20px;
+        padding-left: 25px;
+        background-color: white;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        position: fixed;
+        top: 46%;
+        left: 66%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        /* text-align: center; */
+        animation: none;
+        /* Start with no animation */
+    }
+
+    .sign-in-box h2 {
+        margin-bottom: 20px;
+    }
+
+    .sign-in-box label {
+        display: block;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    .sign-in-box input {
+        width: 90%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .sign-in-box button {
+        padding: 10px 20px;
+        background-color: coral;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .close-signin {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        color: red;
+    }
+
+    /* Animation for Falling Effect */
+    @keyframes dropDown {
+        0% {
+            transform: translate(-50%, -200%);
+            opacity: 0;
+        }
+
+        60% {
+            transform: translate(-50%, 30%);
+            opacity: 1;
+        }
+
+        80% {
+            transform: translate(-50%, 20%);
+        }
+
+        100% {
+            transform: translate(-50%, 0);
+        }
+    }
+
+    .sign-in-box.animate {
+        animation: dropDown 1s ease-out;
+    }
+
+    /* end sign in  */
+
+    /* About Us  */
+    .image-slider {
+        position: relative;
+        width: 100%;
+        height: 10vh;
+        overflow: hidden;
+    }
+
+    .overlay-text h2 {
+        color: coral;
+        font-size: 4vh;
+        text-align: center;
+    }
+
+    .aboutclg {
+        padding: 5vw 10vw;
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+    }
+
+    .eduquality {
+        background-color: #f2f5f5;
+        padding: 5vw 10vw;
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+    }
+
+    .eduquality h1 {
+        width: 100%;
+        font-weight: 700;
+    }
+
+    .eduquality p {
+        font-size: larger;
+        color: #818181;
+        width: 100%;
+        padding: 0 0;
+
+    }
+
+    /* end about us  */
+
+    /* Contact Us  */
+
+    .CI {
+        margin-top: 2vw;
+        font-size: 3vh;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .CIBox {
+        font-size: 1.5vh;
+        height: 25vh;
+        width: 25vh;
+        background-color: coral;
+        border-radius: 12px;
+        color: white;
+        margin-left: 2vw;
+        font-weight: bold;
+        padding: 3vh;
+    }
+
+    .call {
+        height: 3vh;
+        width: 3vh;
+        border-radius: 50%;
+    }
+
+    .CIFLEXBOX {
+        display: flex;
+        gap: 6vw;
+        padding-left: 4vw;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* end Contact Us  */
+
+    /* issue  */
+
+    .issueItem {
+        margin-left: 2vh;
+        margin-top: 5vh;
+        background-color: rgb(247, 133, 92);
+        color: white;
+        font-size: large;
+        font-weight: 600;
+        width: 90vw;
+        height: fit-content;
+        padding: 3vw;
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        box-shadow: 3px 3px 3px 3px black;
+    }
+
+    .issueItem button {
+        border: none;
+        padding: .5vw 1vw;
+        border-radius: 5px;
+        margin-left: 3vw;
+    }
+
+    .issuetable {
+        width: 100%;
+        /* padding-left: 14%; */
+        text-align: center;
+        height: 30vh;
+        overflow-y: scroll;
+        font-weight: lighter;
+
+    }
+
+    /* end issue  */
+}
