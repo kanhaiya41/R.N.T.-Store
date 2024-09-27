@@ -19,7 +19,7 @@ export const SginInUser = async (req, res) => {
             message: 'Something is missing,Please cheack!'
         });
     }
-    const imageUrl = `${process.env.BACKEND_URL}/file/${req.file.originalname}`;
+    const imageUrl = `https://r-n-t-store.onrender.com/file/${req.file.originalname}`;
 
     try {
         const hashedPassword = await bcrypt.hash(password, 10);
