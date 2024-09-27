@@ -877,6 +877,7 @@ nav h4 {
         left: -2%;
         top: 10%;
         padding-top: 7vh;
+        z-index: 11;
         /* padding: 1vh; */
     }
 
