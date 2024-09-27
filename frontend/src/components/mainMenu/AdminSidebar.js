@@ -28,7 +28,7 @@ const AdminSidebar = () => {
 
     // Set the selected state to true
     dispatch(setAction(true));
-    closeuserside();
+    console.log(setAction);
   };
 
 
@@ -59,7 +59,7 @@ const AdminSidebar = () => {
       </div>
       <FontAwesomeIcon icon={faBars}
         onClick={sidebar}
-        className='menuicon' style={{ marginTop: '1vh', marginLeft: '1vh', position: 'absolute' }} />
+        className='menuicon' style={{ marginTop: '1vh', marginLeft: '1vh', position: 'absolute',zIndex:10 }} />
     </>
   )
 }

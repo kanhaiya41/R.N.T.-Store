@@ -24,7 +24,6 @@ const Usersidebar = () => {
 
     // Set the selected state to true
     dispatch(setAction(true));
-    closeuserside();
   };
 
 
@@ -38,7 +37,7 @@ const Usersidebar = () => {
         <div onClick={() => handleUserAction(setSubmitRequest)}>Submit</div>
         <div onClick={() => handleUserAction(setRequests)}>Your Requests</div>
       </div>
-      <FontAwesomeIcon icon={faBars} onClick={sidebar} className='menuicon' style={{ marginTop: '1vh', marginLeft: '1vh', position: 'absolute' }} />
+      <FontAwesomeIcon icon={faBars} onClick={sidebar} className='menuicon' style={{ marginTop: '1vh', marginLeft: '1vh', position: 'absolute' ,zIndex:10}} />
     </>
   )
 }
