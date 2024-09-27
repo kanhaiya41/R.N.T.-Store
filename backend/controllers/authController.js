@@ -202,7 +202,7 @@ export const editProfile = async (req, res) => {
         }
     
         if (image) {
-        const imageUrl = `${process.env.BACKEND_URL}/file/${req.file.originalname}`;
+        const imageUrl = `https://r-n-t-store.onrender.com/file/${req.file.originalname}`;
         const uimage = await User.findByIdAndUpdate(req.id, { image: imageUrl });
         success = true;
         message = 'Account Updated';
