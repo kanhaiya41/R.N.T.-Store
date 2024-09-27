@@ -119,8 +119,8 @@ const Approvel = () => {
                     <div className='reqitma' >
                         UserName:
                         <div className='ritema'>
-                            <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-                            <select value={selection} onChange={handlselection} name="" id="">
+                            <input type="text" className='ritema' value={username} onChange={(e) => setUsername(e.target.value)} />
+                            <select className='ritema' value={selection} onChange={handlselection} name="" id="">
                                 {
                                     selectionList && selectionList.map((curElem) => (
                                         <option value={curElem.username}>{curElem.username}</option>
