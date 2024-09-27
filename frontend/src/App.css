@@ -1132,15 +1132,15 @@ nav h4 {
     }
 
     .CIBox {
-        font-size: 1.5vh;
-        height: 25vh;
-        width: 25vh;
+        font-size: 2.5vh;
+        height: 35vh;
+        width: 35vh;
         background-color: coral;
         border-radius: 12px;
         color: white;
         margin-left: 2vw;
         font-weight: bold;
-        padding: 3vh;
+        padding: 1vh;
     }
 
     .call {

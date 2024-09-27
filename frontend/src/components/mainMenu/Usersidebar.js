@@ -24,6 +24,7 @@ const Usersidebar = () => {
 
     // Set the selected state to true
     dispatch(setAction(true));
+    closeuserside();
   };
 
 
