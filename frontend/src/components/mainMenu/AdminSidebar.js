@@ -28,7 +28,7 @@ const AdminSidebar = () => {
 
     // Set the selected state to true
     dispatch(setAction(true));
-    console.log(setAction);
+    closeuserside();
   };
 
 

@@ -607,6 +607,15 @@ nav h4 {
     margin-top: 12vw;
 
 }
+.welcome {
+    background-image: url('../public/img/rnt1.jpg');
+    height: 85vh;
+    width: calc(100vw - 15vw);
+    background-repeat: no-repeat;
+    margin-left: 15vw;
+    filter: blur(3px);
+    position: absolute;
+}
 
 /* end main menu  */
 
@@ -997,6 +1006,15 @@ nav h4 {
         width: 22vw;
         margin-top: 0vw;
 
+    }
+    .welcome {
+        background-image: url('../public/img/mobilernt.jpg');
+        height: 90vh;
+        width: 100vw;
+        background-repeat: no-repeat;
+        margin-left: 0;
+        filter: blur(3px);
+        position: absolute;
     }
 
     /* end main menu  */
