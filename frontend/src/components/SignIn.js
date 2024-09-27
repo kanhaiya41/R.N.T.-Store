@@ -4,9 +4,11 @@ import { setOpenSignIn, setOpenSignUp, setUser, setUserType } from '../redux/use
 import axios from 'axios';
 import { URL } from '../ultils';
 import toast from 'react-hot-toast';
-import { json } from 'react-router-dom';
+import { json, useNavigate } from 'react-router-dom';
 
 const SignIn = () => {
+
+    const navigate=useNavigate();
 
     const { openSignIn, openSignUp, user, userType } = useSelector(store => store.user);
     const dispatch = useDispatch();
@@ -58,6 +60,50 @@ const SignIn = () => {
         })
     }
 
+    const GenerateRandomOTP = (lenth) => {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        const characterlenth = characters.length;
+        let result = '';
+        for (let i = 0; i < lenth; i++) {
+            result += characters.charAt(Math.floor(Math.random() * characterlenth));
+        }
+        return result;
+    }
+
+    const sentMail = async () => {
+        try {
+            const Code = GenerateRandomOTP(6);
+            if (Code) {
+                if (input.email) {
+
+
+                    setLoading(true);
+                    const res = await axios.post(`${URL}/auth/gmail/${input.email}/${Code}`);
+                    if (res?.data?.success) {
+
+
+                        navigate('/password-authentication', { state: {Code:Code,email:input.email} });
+
+                        toast.success(res?.data?.message);
+                    }
+                }
+                else{
+                    alert('Please put your email!');
+                }
+            }
+            else {
+                toast.error('Code not sent!');
+            }
+
+        } catch (error) {
+            console.log(error);
+
+        }
+        finally {
+            setLoading(false);
+        }
+    }
+
     return (
         <>
             <div id="signInBox" className="sign-in-box">
@@ -68,13 +114,19 @@ const SignIn = () => {
 
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" required value={input.password} onChange={(e) => inputHandler(e)} />
-                    {
-                        loading ? <button>
-                            <img src="/img/loader.png" className='Loader' alt="loader" />
-                        </button>
-                            :
-                            <button type="submit" onClick={signIn}>Sign In</button>
-                    }
+                    <div className="pswrds">
+                        {
+                            loading ? <button>
+                                <img src="/img/loader.png" className='Loader' alt="loader" />
+                            </button>
+                                :
+                                <button type="submit" onClick={signIn}>Sign In</button>
+
+                        }
+                        <span className='frgtpswrd'
+                        onClick={() => sentMail()}
+                        >forget password</span>
+                    </div>
                 </form>
                 <span className="close-signin" onClick={() => dispatch(setOpenSignIn(!openSignIn))}>X</span>
                 <p>Don't have any account?<span style={{ color: 'green', cursor: 'pointer' }} onClick={() => {

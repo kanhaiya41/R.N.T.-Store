@@ -248,3 +248,26 @@ export const sendMail = async (req, res) => {
         res.status(500).send("error sending mail:" + error.message);
     }
 };
+
+export const forgetPassword=async(req,res)=>{
+    try {
+        const {email,password}=req.body;
+        const user=await User.findOne({email});
+        if(!user)
+        {
+            return res.status(401).json({
+                success:false,
+                message:'email does not match!'
+            });
+        }
+        const hashedPassword=await bcrypt.hash(password,10);
+        const updateduser=await User.findOneAndUpdate({email},{password:hashedPassword});
+        return res.status(200).json({
+            success:true,
+            message:'Password updated',
+            updateduser
+        });
+    } catch (error) {
+        console.log("while forget password",error);
+    }
+}
