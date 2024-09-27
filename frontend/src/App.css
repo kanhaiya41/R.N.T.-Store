@@ -894,7 +894,7 @@ nav h4 {
     }
 
     .sotable {
-        width: 80%;
+        width: 100%;
         box-shadow: rgb(216, 206, 206) 0.1vh 0.5vh;
         height: 30vh;
     }
@@ -918,6 +918,7 @@ nav h4 {
     .allitems {
         margin-left: 0;
         margin-top: 5vh;
+        width: 90vw;
     }
 
     .RequestItem {
@@ -961,11 +962,14 @@ nav h4 {
     .r {
         margin-left: 0;
         margin-top: 5vh;
+        width: 90vw;
+        
     }
 
     .rr {
         margin-left: 0;
         margin-top: 5vh;
+        width: 90vw;
     }
 
     .bgn {
